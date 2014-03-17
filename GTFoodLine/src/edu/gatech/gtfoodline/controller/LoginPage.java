@@ -1,7 +1,8 @@
-package edu.gatech.gtfoodline;
+package edu.gatech.gtfoodline.controller;
 
 import java.util.Locale;
 
+import edu.gatech.gtfoodline.R;
 import android.app.ActionBar;
 import android.app.FragmentTransaction;
 import android.os.Bundle;
