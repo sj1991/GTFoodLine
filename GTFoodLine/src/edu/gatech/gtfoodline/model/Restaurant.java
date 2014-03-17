@@ -1,5 +1,15 @@
 package edu.gatech.gtfoodline.model;
 
+/**
+ * @author sahilgupta
+ *
+ * This class represent a Restaurant. A restaurant has several menus
+ * associated with it. For instance, a restaurant with many menus 
+ * such as Breakfast, Lunch, Dinner, etc will have several instances
+ * of this object associated with it.
+ */
+
+
 public class Restaurant {
 
 	private String restaurantName;

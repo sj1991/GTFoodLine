@@ -1,63 +1,102 @@
 package edu.gatech.gtfoodline.model;
 
-public class User {
-	
-	private static String username;
-	private static String passwordEncryption;
-	private static String firstName;
-	private static String lastName;
-	private static Double phoneNumber;
-	private static String emailAddress;
-	private static Boolean isVendor;
-	private static String organization;
+/**
+ * @author sahilgupta
+ *
+ * This class represent a User. A user can be either a vendor or a 
+ * client/customer user. This object stores information about the 
+ * user temporarily during its existence. The password's encryption 
+ * will be stored only. AES 128 bit encryption will be used to encrypt
+ * and decrypt the password.
+ * 
+ */
 
-	public static String getUsername() {
+public class User {
+
+	private static User INSTANCE = null;
+	
+	//This helps in creating a singleton User class to make 
+	//sure only one instance exits and multiple threads do not
+	//access it at the same time/locked properly.
+	protected User(){}
+	
+	public static synchronized User getInstance(){
+		if(INSTANCE == null){
+			INSTANCE = new User();
+		}
+		return INSTANCE;
+	}
+	
+	private String username;//has to be unique identifier for all users, Cannot be Null
+	private String passwordEncryption;//Cannot be Null
+	private String firstName;//Cannot be Null
+	private String lastName;//Cannot be Null
+	private Double phoneNumber;//May or may not be Null
+	private String emailAddress;//Cannot be Null
+	private String organization;//May or may not be Null
+
+	public static User getINSTANCE() {
+		return INSTANCE;
+	}
+
+	public static void setINSTANCE(User iNSTANCE) {
+		INSTANCE = iNSTANCE;
+	}
+
+	public String getUsername() {
 		return username;
 	}
-	public static void setUsername(String username) {
-		User.username = username;
+
+	public void setUsername(String username) {
+		this.username = username;
 	}
-	public static String getPassword() {
+
+	public String getPasswordEncryption() {
 		return passwordEncryption;
 	}
-	public static void setPassword(String password) {
-		User.passwordEncryption = password;
+
+	public void setPasswordEncryption(String passwordEncryption) {
+		this.passwordEncryption = passwordEncryption;
 	}
-	public static String getFirstName() {
+
+	public String getFirstName() {
 		return firstName;
 	}
-	public static void setFirstName(String firstName) {
-		User.firstName = firstName;
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
 	}
-	public static String getLastName() {
+
+	public String getLastName() {
 		return lastName;
 	}
-	public static void setLastName(String lastName) {
-		User.lastName = lastName;
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
 	}
-	public static Double getPhoneNumber() {
+
+	public Double getPhoneNumber() {
 		return phoneNumber;
 	}
-	public static void setPhoneNumber(Double phoneNumber) {
-		User.phoneNumber = phoneNumber;
+
+	public void setPhoneNumber(Double phoneNumber) {
+		this.phoneNumber = phoneNumber;
 	}
-	public static String getEmailAddress() {
+
+	public String getEmailAddress() {
 		return emailAddress;
 	}
-	public static void setEmailAddress(String emailAddress) {
-		User.emailAddress = emailAddress;
+
+	public void setEmailAddress(String emailAddress) {
+		this.emailAddress = emailAddress;
 	}
-	public static Boolean getIsVendor() {
-		return isVendor;
-	}
-	public static void setIsVendor(Boolean isVendor) {
-		User.isVendor = isVendor;
-	}
-	public static String getOrganization() {
+
+	public String getOrganization() {
 		return organization;
 	}
-	public static void setOrganization(String organization) {
-		User.organization = organization;
+
+	public void setOrganization(String organization) {
+		this.organization = organization;
 	}
 	
 }
