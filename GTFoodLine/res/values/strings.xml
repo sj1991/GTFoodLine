@@ -30,7 +30,17 @@
 	<string name="time">Time</string>
 	<string name="checkAvailability">Check Availability</string>
 	<string name="paymentInformation">Enter your Payment Information</string>
-	
+	<string name="pay">Pay</string>
+	<string name="confirmation">Confirmation</string>
+	<string name="order">Order Information</string>
+	<string name="total">Total Amoount</string>
+	<string name="paymentMethod">Payment Method</string>
+	<string name="transactionTime">Transaction Time</string>
+	<string name="qrcode">QR Code</string>
+	<string name="orders">Orders</string>
+	<string name="sortByTime">Sort By Time</string>
+	<string name="sortByName">Sort By Name</string>
+		
 	
 	
 	
