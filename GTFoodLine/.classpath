@@ -5,7 +5,7 @@
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
 	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
-	<classpathentry kind="lib" path="/Users/sahilgupta/Desktop/SkyDrive/Coding/Android/extras/android/support/v4/android-support-v4.jar"/>
-	<classpathentry kind="lib" path="/Users/sahilgupta/Desktop/SkyDrive/Coding/eclipse/commons-codec-1.9/commons-codec-1.9.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sarthakjaiswal/Downloads/commons-codec-1.9-bin/commons-codec-1.9/commons-codec-1.9.jar"/>
+	<classpathentry kind="lib" path="C:/Users/sarthakjaiswal/android-sdks/extras/android/support/v4/android-support-v4.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>
